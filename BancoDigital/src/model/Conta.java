@@ -5,7 +5,6 @@ import java.util.Date;
 
 /**
  * Classe responsável por moldar as Contas do Banco
- * 
  * @author Reulisson Torres
  */
 public abstract class Conta implements Comparable<Conta> {
@@ -31,7 +30,6 @@ public abstract class Conta implements Comparable<Conta> {
 
 	/**
 	 * Método que incrementa o valor do saldo
-	 * 
 	 * @param valor
 	 * @return
 	 */
@@ -110,7 +108,8 @@ public abstract class Conta implements Comparable<Conta> {
 	public abstract String getTipo();
 
 	public void transfere(double valor, Conta conta) {
-		// TODO: RESOLVE ESSA MERDA
+		this.saca(valor);
+		conta.deposita(valor);
 	}
 
 	@Override
